@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEats Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">Campus<span>Eats</span></div>
+    </div>
+    <main class="container">
+        <h1>Menu Management</h1>
+        <div class="toolbar">
+            <button class="btn btn-primary" onclick="showAddForm()">Add Dish</button>
+        </div>
+        
+        <div class="grid" id="menu-grid">
+            <!-- Items loaded via JS -->
+        </div>
+
+        <div id="modal-backdrop" class="modal-backdrop" style="display: none;">
+            <div class="modal">
+                <div class="modal-header" id="modal-title">Add Dish</div>
+                <div class="modal-body form-card">
+                    <form id="menu-form">
+                        <input type="hidden" id="dish-id">
+                        <div class="field">
+                            <label>Name</label>
+                            <input type="text" id="dish-name" required maxlength="80">
+                        </div>
+                        <div class="field">
+                            <label>Price</label>
+                            <input type="number" id="dish-price" required min="0" step="0.01">
+                        </div>
+                        <div class="field">
+                            <label>Category</label>
+                            <input type="text" id="dish-category" required maxlength="40">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button class="btn btn-primary" onclick="saveDish()">Save</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
