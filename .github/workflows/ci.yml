@@ -27,4 +27,6 @@ jobs:
 
     # Uncomment the following step if unit tests are added in the future
     # - name: Test
-    #   run: dotnet test src/CampusEats.Api/CampusEats.Api.csproj --no-build --verbosity normal --configuration Release
+    #   run: dotnet test src/CampusEats.Api/CampusEats.Api.csproj --no-build --verbosity normal --configuration Release 
+    #   - name: Publish
+    # run: dotnet publish src/CampusEats.Api/CampusEats.Api.csproj --no-build --configuration Release --output ./publish
